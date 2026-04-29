@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  .neon-text-cyan {
+    text-shadow: 0 0 5px theme('colors.cyan.400'), 0 0 10px theme('colors.cyan.400'), 0 0 20px theme('colors.cyan.400');
+  }
+  .neon-text-fuchsia {
+    text-shadow: 0 0 5px theme('colors.fuchsia.500'), 0 0 10px theme('colors.fuchsia.500'), 0 0 20px theme('colors.fuchsia.500');
+  }
+  .neon-text-green {
+    text-shadow: 0 0 5px theme('colors.green.400'), 0 0 10px theme('colors.green.400'), 0 0 20px theme('colors.green.400');
+  }
+  
+  .neon-box-cyan {
+    box-shadow: 0 0 5px theme('colors.cyan.500'), inset 0 0 5px theme('colors.cyan.500');
+  }
+  .neon-box-fuchsia {
+    box-shadow: 0 0 5px theme('colors.fuchsia.500'), inset 0 0 5px theme('colors.fuchsia.500');
+  }
+}
+
+body {
+  background-color: #050505;
+  color: #fff;
+  overflow: hidden; /* Prevent scrolling since it's a full-screen game/player app */
+}
